@@ -6,7 +6,6 @@ There are {{ ads|length }} entries in Ads DB.
     <tr>
         <th style='text-align:left'>Name</th>
         <th style='text-align:left'>Description</th>
-        <th style='text-align:left'>Image</th>
     </tr>
 {% for ad in ads %}
     <tr>
@@ -15,9 +14,6 @@ There are {{ ads|length }} entries in Ads DB.
         </th>
         <th style='text-align:left'>
             {{ ad['description'] }}
-        </th>
-        <th style='text-align:left'>
-            <img src='{{ ad['image_url'] }}'>
         </th>
     </tr>
 {% endfor %}
@@ -44,14 +40,6 @@ There are {{ ads|length }} entries in Ads DB.
             </th>
             <th style='text-align:left'>
                 <input type=text name=description><br>
-            </th>
-        </tr>
-        <tr>
-            <th style='text-align:left'>
-                <label for='file'>Select file</label>
-            </th>
-            <th style='text-align:left'>
-                <input type=file name=file>
             </th>
         </tr>
     </table>
