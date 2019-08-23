@@ -18,7 +18,7 @@ Session(app)
 
 # RDS configs
 RDS_USER = 'admin'
-RDS_PASSWORD = 'Jaguar480517'
+RDS_PASSWORD = ''
 RDS_HOST = 'ads-dbv2.ciy7so8qb1dd.us-east-2.rds.amazonaws.com'
 RDS_PORT = 3306
 RDS_DB = 'ads_db'
