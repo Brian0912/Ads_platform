@@ -19,12 +19,12 @@ Session(app)
 # RDS configs
 RDS_USER = 'admin'
 RDS_PASSWORD = ''
-RDS_HOST = 'ads-dbv2.ciy7so8qb1dd.us-east-2.rds.amazonaws.com'
+RDS_HOST = ''
 RDS_PORT = 3306
 RDS_DB = 'ads_db'
 
 # S3 configs
-BUCKET_NAME = 'mark-ads-upload'
+BUCKET_NAME = ''
 
 # S3 resource set up
 s3 = boto3.resource('s3')
@@ -83,7 +83,7 @@ def s3_get_presigned_url(obj):
     return None
 
 #RDS operations
-def insert_ad(name, description):
+def insert_ad(name, description, image_key):
   query = "INSERT INTO ads(name, description, image_key) VALUES ('{}', '{}', '{}')".format(name, description, image_key)
   rds_execute_query(query)
 def list_ads():
